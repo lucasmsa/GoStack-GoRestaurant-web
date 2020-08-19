@@ -2,19 +2,19 @@
   "foods": [
     {
       "id": 1,
-      "name": "Ao molho",
+      "name": "Ao molho de ovo",
       "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas.",
-      "price": "19.90",
-      "available": true,
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
+      "price": "22.90",
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
+      "available": true
     },
     {
       "id": 2,
       "name": "Veggie",
-      "description": "Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.",
-      "price": "21.90",
-      "available": true,
-      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png"
+      "description": "Macarrão de arroz",
+      "price": "28.90",
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png",
+      "available": false
     },
     {
       "id": 3,
@@ -23,6 +23,22 @@
       "price": "25.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+    },
+    {
+      "id": 4,
+      "name": "Cachorro quente",
+      "image": "https://media.gazetadopovo.com.br/bomgourmet/2017/08/cachorro-quente-capa-2877bf80.png",
+      "price": "9.99",
+      "description": "Cachorro quente bão com mostarda dijon",
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "macarronada",
+      "image": "https://www.sabornamesa.com.br/media/k2/items/cache/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg",
+      "price": "15.99",
+      "description": "Macarronada da boa",
+      "available": true
     }
   ]
 }
