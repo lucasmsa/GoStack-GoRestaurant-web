@@ -22,7 +22,7 @@ interface IFoodPlate {
 const Dashboard: React.FC = () => {
   const [foods, setFoods] = useState<IFoodPlate[]>([]);
   const [editingFood, setEditingFood] = useState<IFoodPlate>({} as IFoodPlate);
-  const [maxId, setMaxId] = useState<number>(0);
+  const [maxId, setMaxId] = useState<number>(1);
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
     async function loadFoods(): Promise<void> {
       await api.get('/foods').then(response => {
         setFoods(response.data);
-        setMaxId(response.data.length + 1);
+        setMaxId(response.data.length);
       });
     }
 
@@ -42,9 +42,10 @@ const Dashboard: React.FC = () => {
   ): Promise<void> {
     try {
       const { name, image, price, description } = food;
+      console.log(maxId);
       await api
         .post('/foods', {
-          id: maxId,
+          id: maxId + 1,
           name,
           image,
           price,
@@ -54,7 +55,7 @@ const Dashboard: React.FC = () => {
         .then(response => {
           const allFoods = [...foods, response.data];
           setFoods(allFoods);
-          setMaxId(allFoods.length + 1);
+          setMaxId(allFoods.length);
         });
     } catch (err) {
       console.log(err);
